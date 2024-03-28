@@ -1,0 +1,226 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+   
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-wrap">
+            <div class="cssload-container">
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+	<div class="page-wraper cus-account-wrap">
+    
+        <header id="header-admin-wrap" class="header-admin-fixed">
+        
+            <!-- Header Start -->
+            <div id="header-admin">
+                <div class="container">
+                    
+                    <!-- Left Side Content -->
+                    <div class="header-left">
+                        <div class="cus-account-logo">
+                            <a href="/">
+                                <img src="https://corunit.com/wp-content/uploads/2023/05/cropped-cropped-corunit-logo-untitled-.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Left Side Content End -->
+                    
+                    
+        
+                </div>
+            </div>
+            <!-- Header End -->
+        
+        </header>
+        
+        
+    	
+        <!-- Page Content Holder -->
+        <div id="content">
+            
+            <div class="cus-top-nav">
+                
+                <div class="container">
+    
+                    <ul class="cus-nav row">
+                        <li class="col active"><a href="{% url 'account:customer' %}">Executive Summary </a></li>
+                        <li class="col"><a href="{% url 'account:website' %}">Execution </a></li>
+                        <li class="col"><a href="{% url 'account:patient_profile' %}">Company</a></li>
+                        <li class="col"><a href="{% url 'account:patient_password' %}">Marketing</a></li>
+                    </ul>
+                </div>
+                    
+            </div>
+
+            <div class="content-admin-main">
+                
+                
+            	
+                
+                <div class="section-full p-t30 p-b90 sf-contact-form3-area">
+                    <div class="container">
+                    
+                        <div class="sf-contact-form3-wrap">
+                            <div class="sf-con-form-title text-center">
+                                <h2 class="m-b30">Executive Summary</h2>
+                            </div>
+                            <!--Contact Information-->  
+                            <div class="sf-contact-form3 shadow">
+                                <form class="contact-form" method="post">
+                                    <div class="row">
+                                        
+                                        <!-- COLUMNS 1 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Problem Summary- What problems do you solve for? </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Why are you the right provider? </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Why should they come to you now?                                                </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">What will be different ? </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Your Solution Summary  </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                       
+                                       
+                                        <hr>
+                                        <h3>Market </h3>
+                                        <hr>
+                                         <!-- COLUMNS 2 -->
+                                         <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">What are the patient demographics you cater to? 
+                                                </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                         <!-- COLUMNS 2 -->
+                                         <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">What Is Your Unique Value Proposition ?   </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">How Many Patients Do You Have and How Much Do You Earn for Each Subset of Patient?   </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h3>Opportunity </h3>
+                                        <hr>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Describe in depth the problems you want to solve for? 
+                                                </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">How do you target patients you want to reach? </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">What Is Your Unique Value Proposition ?   </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">How Many Patients Do You Have and How Much Do You Earn for Each Subset of Patient?   </label>
+                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sf-contact-submit-btn text-center">
+                                        <button class="site-button" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--Contact Information End-->
+                        </div>  
+            
+                    </div>
+                    
+                </div>
+               
+
+ 
+            </div>
+            
+    	</div>
+
+ </div>       
+
+
+{% endblock body %}
+    
+
+
+{% block js %}
+
+{% endblock js %}
+    

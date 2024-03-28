@@ -1,0 +1,177 @@
+{% extends 'base2.html' %}"
+{% load static %}"
+
+{% block header %}"
+
+{% endblock header %}"
+
+{% block css %}"
+    
+{% endblock css %}"
+    
+
+
+{% block body %}"
+{% load static %}"
+
+<!-- Content -->
+<div class="page-content">
+            
+    <!-- Banner Area -->
+    <div class="aon-page-benner-area">
+      <div class="aon-page-banner-row">
+         <div class="aon-page-benner-overlay" ></div>
+         <div class="sf-banner-heading-wrap">
+           <div class="sf-banner-heading-area">
+             <div class="sf-banner-heading-large">Contact Us</div>
+             <div class="sf-banner-breadcrumbs-nav">
+               <ul class="list-inline">
+                 <li><a href="{% url 'home:home' %}"> Home </a></li>
+                 <li><a href="">Get In Touch</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- Banner Area End -->
+     
+     <div class="section-full p-t80 sf-contact-form3-map">
+        <div class="container">
+            <div class="sf-map2-wrap grayscle-area">
+                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+     
+    <div class="section-full p-t80 p-b90 sf-contact-form3-area">
+        <div class="container">
+        
+            <div class="sf-contact-form3-wrap">
+                <div class="sf-con-form-title text-center">
+                    <h2 class="m-b30">Contact Information</h2>
+                </div>
+                <!--Contact Information-->  
+                <div class="sf-contact-form3 shadow">
+                    <form class="contact-form" method="post">
+                        <div class="row">
+                            
+                            <!-- COLUMNS 1 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="fullname" placeholder="Name" class="form-control" required="">
+                                </div>
+                            </div>
+                            <!-- COLUMNS 2 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="Email" class="form-control" required="">
+                                </div>
+                            </div>
+                            <!-- COLUMNS 3 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Phone" class="form-control">
+                                </div>
+                            </div>
+                            <!-- COLUMNS 4 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="subject" placeholder="Subject" class="form-control" required="">
+                                </div>
+                            </div>
+                            <!-- COLUMNS 5 -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message" class="form-control" rows="4" required=""></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+
+                                <div class="g-recaptcha" data-sitekey="6LfcCr0eAAAAAN2P-3cJJC1StgxbUWvwELbMVjnp"></div>
+
+                            </div>
+
+                        </div>
+                        <div class="sf-contact-submit-btn text-center">
+                            <button class="site-button" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <!--Contact Information End-->
+            </div>  
+
+        </div>
+        
+    </div>
+    
+    <div class="aon-contact2-area">
+        <div class="container">
+
+          <div class="section-content">
+                
+              <div class="row">
+                  <!--Left Section-->
+                  <div class="col-lg-6">
+                      <div class="aon-contact-2-pic">
+                          <img src="{% static 'images/large-pic3.png' %}" alt="">
+                      </div>
+                  </div>
+                  <!--Right Section-->
+                    <div class="col-lg-6">
+                      <div class="aon-contact-2-info-content">
+                        
+                        <div class="aon-contact-2-info-wrap">
+                            
+                            <div class="sf-contact-2-info-box">
+                                <div class="sf-contact-2-icon">
+                                    <span><img src="{% static 'images/contact-us/1.png' %}" alt=""></span>
+                                </div>
+                                <div class="sf-contact-2-info">
+                                    <h4 class="sf-title">Mailing Address</h4>
+                                    <p>121 King Street, Melbourne Victoria 3000 Australia</p>
+                                </div>
+                            </div>
+
+                            <div class="sf-contact-2-info-box">
+                                <div class="sf-contact-2-icon">
+                                    <span><img src="{% static 'images/contact-us/2.png' %}" alt=""></span>
+                                </div>
+                                <div class="sf-contact-2-info">
+                                    <h4 class="sf-title">Email Info</h4>
+                                    <p>info@brandcoin.com</p><p>support@brandcoin.com</p>
+                                </div>
+                            </div>
+
+                            <div class="sf-contact-2-info-box">
+                                <div class="sf-contact-2-icon">
+                                    <span><img src="{% static 'images/contact-us/3.png' %}" alt=""></span>
+                                </div>
+                                <div class="sf-contact-2-info">
+                                    <h4 class="sf-title">Phone Number</h4>
+                                    <p>0800-123456 (24/7 Support Line)</p>
+                                    <p>0800-123654</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                      
+                  </div>
+              </div>    
+                       
+          </div>
+  
+        </div>
+    </div>
+  </div>
+  <!-- Content END-->
+{% endblock body %}"
+    
+
+
+{% block js %}"
+
+{% endblock js %}"
+    
