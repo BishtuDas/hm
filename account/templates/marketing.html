@@ -1,0 +1,422 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+   
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-wrap">
+            <div class="cssload-container">
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+	<div class="page-wraper cus-account-wrap">
+    
+        <header id="header-admin-wrap" class="header-admin-fixed">
+        
+            <!-- Header Start -->
+            <div id="header-admin">
+                <div class="container">
+                    
+                    <!-- Left Side Content -->
+                    <div class="header-left">
+                        <div class="cus-account-logo">
+                            <a href="/">
+                                <img src="https://corunit.com/wp-content/uploads/2023/05/cropped-cropped-corunit-logo-untitled-.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Left Side Content End -->
+                    
+                    
+        
+                </div>
+            </div>
+            <!-- Header End -->
+        
+        </header>
+        
+        
+    	
+        <!-- Page Content Holder -->
+        <div id="content">
+            
+            <div class="cus-top-nav">
+                
+                <div class="container">
+    
+                    <ul class="cus-nav row">
+                        <li class="col"><a href="{% url 'account:customer' %}">Executive Summary </a></li>
+                        <li class="col"><a href="{% url 'account:website' %}">Webiste</a></li>
+                        <li class="col"><a href="{% url 'account:company' %}">Company</a></li>
+                        <li class="col active"><a href="{% url 'account:marketing' %}">Marketing</a></li>
+                    </ul>
+                </div>
+                    
+            </div>
+
+
+
+            <div class="section-full p-t30 p-b90 sf-contact-form3-area">
+                <div class="container">
+                
+                    <div class="sf-contact-form3-wrap">
+                        <div class="sf-con-form-title text-center">
+                            <h2 class="m-b30">Marketing</h2>
+                        </div>
+                        <!--Contact Information-->  
+                        <div class="sf-contact-form3 shadow">
+                            <form class="contact-form" method="post">
+                                <div class="row">
+                                    
+                                    <!-- COLUMNS 1 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What is your (CAC) Customer acquisition cost?</label>
+                                            <textarea name="cac" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Do you have a budget?</label>
+                                            <textarea name="budget" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What is it? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How many referrals do you get from other patients, medical professionals, friends, etc. on a yearly 
+                                                basis?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How do you thank them? Why should people refer business to you?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What methods of marketing are you currently utilizing to build your brand?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How many landing pages do you have?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Website Product</label>
+                                                <p>Which website product are you ordering?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option>Facebook Ads </option>
+                                                    <option>Google Ads</option>
+                                                    <option>Instagram ads</option>
+                                                    <option>Twitter ads</option>
+                                                    <option>3rd Party</option>
+                                                    <option>Vitals </option>
+                                                    <option>Billboards </option>
+                                                    <option>Digital marketing </option>
+
+                                                    <option>Healthgrades </option>
+                                                    <option>ZocDoc.com </option>
+                                                    <option>Healthgrades</option>
+                                                    <option>Docspot </option>
+                                                    <option>EZdoctor</option>
+                                                    <option>Caredash </option>
+                                                    <option>Website</option>
+                                                    <option>Bing Ads</option>
+                                                    <option>Apple</option>
+                                                    <option>Other Social Media </option>
+                                                    <option>Health.usnews.com</option>
+                                                    <option>Youtube</option>
+                                                    <option>Healthgrades.com </option>
+                                                    <option>Webmd.com </option>
+                                                    <option>Do you host any social </option>
+                                                    <option>Live events </option>
+
+                                                    <option>Reddit </option>
+                                                    <option>Your blog</option>
+                                                    <option>3rd Party Blogs</option>
+                                                    <option>Yelp </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                   
+                                   
+                                    <hr>
+                                    <h3>Patient Acquisition</h3>
+                                    <hr>
+                                     <!-- COLUMNS 2 -->
+                                     <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Describe your process from the minute a patient contacts and throughout their journey. 
+                                            </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                     <!-- COLUMNS 2 -->
+                                     <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What is the lifetime value of your customers?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How often are follow-up appointments? Is this consistent? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What percentage of your patients return weekly, monthly, quarterly, or annually? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>How do you or your staff communicate with customers? </label>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option>Email</option>
+                                                    <option>Phone</option>
+                                                    <option>Text</option>
+                                                    <option>Newsletter </option>
+                                                    <option>Blog</option>
+                                                    <option>Social Media</option>
+                                                    <option>Media Communications </option>
+                                                    <option>Events </option>
+                                                    <option>Combination</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Are you or your staff reaching out proactively or reactively?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How Call/text/email reminders? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">When/how does your staff follow up to confirm the appointment? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">If they need to reschedule, what actions occur? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    
+
+
+                                    
+                                    
+
+
+                                    
+
+
+                                    
+                                    <hr>
+                                    <h3>Reputation Management</h3>
+                                    <hr>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">If I were to Google your name what would I see? Do you know? 
+                                            </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What about if I were to Google the name of your clinic? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What does your claimed Google listing show? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Is all of the information accurate? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">How many reviews do you have?</label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What are your average ratings? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <h3>Obtaining Reviews:</h3><p>The single best promotion/advocation of your services</p>
+                                    <hr>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Online reputation is extremely important in today's day and age?   
+                                            </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">What is your process for requesting reviews from patients? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- COLUMNS 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for=""> When the patient leaves the office, do you have any more correspondences?  </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <h3>What Are Some of the Biggest Challenges You Face:</h3>
+                                    <hr>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">As a Medical Practitioner? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">As a Business Owner? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Industry Risks? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Competitive Risks? </label>
+                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                        </div>
+                                    </div>
+</div>
+                                <div class="sf-contact-submit-btn text-center">
+                                    <button class="site-button" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Contact Information End-->
+                    </div>  
+        
+                </div>
+                
+            </div>
+           
+
+{% endblock body %}
+    
+
+
+{% block js %}
+
+{% endblock js %}
+    
