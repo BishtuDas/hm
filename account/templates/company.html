@@ -1,0 +1,510 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+   
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-wrap">
+            <div class="cssload-container">
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+            <span class="cssload-dots"></span>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+	<div class="page-wraper cus-account-wrap">
+    
+        <header id="header-admin-wrap" class="header-admin-fixed">
+        
+            <!-- Header Start -->
+            <div id="header-admin">
+                <div class="container">
+                    
+                    <!-- Left Side Content -->
+                    <div class="header-left">
+                        <div class="cus-account-logo">
+                            <a href="/">
+                                <img src="https://corunit.com/wp-content/uploads/2023/05/cropped-cropped-corunit-logo-untitled-.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Left Side Content End -->
+                    
+                    
+        
+                </div>
+            </div>
+            <!-- Header End -->
+        
+        </header>
+        
+        
+    	
+        <!-- Page Content Holder -->
+        <div id="content">
+            
+            <div class="cus-top-nav">
+                
+                <div class="container">
+                    <ul class="cus-nav row">
+                        <li class="col"><a href="{% url 'account:customer' %}">Executive Summary </a></li>
+                        <li class="col"><a href="{% url 'account:website' %}">Webiste</a></li>
+                        <li class="col  active"><a href="{% url 'account:company' %}">Company</a></li>
+                        <li class="col"><a href="{% url 'account:marketing' %}">Marketing</a></li>
+                    </ul>
+                </div>
+                    
+            </div>
+
+
+
+            <div class="content-admin-main">
+                
+                <div class="aon-admin-heading">
+                    <h3>Company</h3>
+                </div>                    
+                 <!--Contact Information-->  
+                 <!--Contact Information-->  
+                 <div class="sf-contact-form3 shadow">
+                    <form class="contact-form" method="post">
+                    <h3>Marketing Plan </h3>    
+                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">How do you plan on reaching your target audience? </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">What marketing channels are you currently using?  </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Which ones are working and which ones are not?  </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">What platforms are you using to track this?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <h3>Sales Plan:</h3>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Does your company relies on salespeople to close deals/generate revenue?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">How do you convert people who express interest into paying customers?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for=""> This should coincide with your marketing plans.</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    
+                    <h3>Operations</h3>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Locations & Facilities-Telemedicine? </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for=""> Describe your company's physical locations. </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+   
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">How much space do you have available? Is it enough to fulfill all of your current 
+                                business/future plans?  </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+                    
+                       
+                    <h3>Technology</h3>
+                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for=""> Describe any important software or other technology that you use now or 
+                                plan to use to operate your business: </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">  EMR </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Other Marketing tools </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+
+                    <h3>Milestones & Metrics</h3>
+                    <p>Milestones</p>
+                    
+                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">What are your key milestones and the dates you plan to accomplish them?  </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">How do you define success?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">What milestones have you already accomplished?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <h3>Key Metrics</h3>
+                    
+                   <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Which metrics do you focus on in your business to determine success? 
+                                Do you track KPl's?</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">What is your ROI from ongoing investments in your business? {Ex. marketing initiatives, 
+                                office, Paid Ads, community outreach, social, etc.}</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">KPI {Key Performance Indicators} List your KPIs {Ex. revenue, referrals, reviews, patient           satisfaction, etc.} </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">How do you use and monetize this data? </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                    <h3>Company</h3>
+                    <p>Ownership/ Hierarchy </p>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">HOwners </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Legal Structure </label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+                    
+
+                    <h3>Management Team </h3>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">List the members of your management team including yourself.</label>
+                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">Describe what each person's “brings to the table”: </label>
+                            <textarea name="message" placeholder="Role,Skills,Experience,Credentials,Expertise,Contribution,Strengths/weaknesses {Create SWOT Analysis}" class="form-control" rows="4" required=""></textarea>
+                        </div>
+                    </div>
+
+
+                   <h3>Financial Plan for Your Business</h3>
+                   
+                   <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Do You Have One ?
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                   <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Describe how you came up with the values in your forecast?
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Did you project your revenue based on past results, market research, your best guess at 
+                            how many people who visit your store, and what percentage of them might buy, or 
+                            some other method?</label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">What kind of growth are you assuming? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                
+
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">What are your key hires and notable expenses? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                
+                     
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">What level of profit do you expect to generate for the business and per patient? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Determine your Revenues and Expenses along with what is successful and what is not that you are investing money into. How do you quantify a successful business venture/expense? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+
+                <h3>Business</h3>
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Have you evaluated all aspects of your business? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Do you have a formal business plan and have you put together a proforma? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Have you created a budget? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for=""> What are your goals?
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for=""> How do you benchmarks where you are? 
+                        </label>
+                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                    </div>
+                </div>
+
+
+                <h3>Do You Have Any Strategic Partnerships ?</h3>
+
+                
+<div class="col-md-12">
+    <div class="form-group">
+        <label for=""> What centers of influence (COI) refer/promote your business?
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">How do you help them?
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">Are you leveraging them?
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">Why don't you leverage them? 
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">Would you like a strategy to maximize those relationships? 
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">Do you have a referral network, ex. primary care, chiro or PT? 
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="">
+            How do you leverage centers of influence? 
+        </label>
+        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+    </div>
+</div>
+
+                
+
+ 
+
+
+
+
+
+
+<div class="sf-contact-submit-btn text-center">
+    <button class="site-button" type="submit">Save</button>
+</div>
+
+                
+
+                
+
+                
+
+
+                
+
+                   
+
+
+                    </form>
+                 </div>
+            </div>
+                            
+            {% endblock body %}
+    
+
+
+            {% block js %}
+            
+            {% endblock js %}

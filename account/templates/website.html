@@ -71,10 +71,10 @@
                 <div class="container">
     
                     <ul class="cus-nav row">
-                        <li class="col "><a href="{% url 'account:customer' %}">Appointments</a></li>
-                        <li class="col active"><a href="{% url 'account:website' %}">Website</a></li>
-                        <li class="col"><a href="{% url 'account:patient_profile' %}">View/Edit Profile</a></li>
-                        <li class="col"><a href="{% url 'account:patient_password' %}">Change Password</a></li>
+                        <li class="col"><a href="{% url 'account:customer' %}">Executive Summary </a></li>
+                        <li class="col  active"><a href="{% url 'account:website' %}">Webiste</a></li>
+                        <li class="col"><a href="{% url 'account:company' %}">Company</a></li>
+                        <li class="col"><a href="{% url 'account:marketing' %}">Marketing</a></li>
                     </ul>
                 </div>
                     
@@ -102,13 +102,13 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <select class="form-select" aria-label="Default select example">
-                                        <option>Webiste: 5 pages</option>
-                                        <option>Webiste: 10 pages</option>
-                                        <option>Webiste: 15 pages</option>
-                                        <option>Webiste: 20 pages</option>
-                                        <option>Webiste: 25 pages</option>
-                                        <option>Webiste: 25+ pages</option>
-                                        <option>Webiste: Landing Page</option>
+                                        <option>Custom Website: 5 pages</option>
+                                        <option>Custom Website: 10 pages</option>
+                                        <option>Custom Website: 15 pages</option>
+                                        <option>Custom Website: 20 pages</option>
+                                        <option>Custom Website: 25 pages</option>
+                                        <option>Custom Website: 25+ pages</option>
+                                        <option>Custom Website: Landing Page</option>
                                     </select>
                                 </div>
                             </div>
@@ -708,7 +708,8 @@
                             
                         </div>
                         <div class="sf-contact-submit-btn text-center">
-                            <button class="site-button" type="submit">Save</button>
+                            <button class="site-button" type="submit">Save & Continue Editing</button>
+                            <button class="site-button" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
