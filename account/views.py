@@ -39,3 +39,17 @@ def patient_profile(request):
 
     }
     return render(request, 'patient_profile.html', context)
+
+
+
+def marketing(request):
+    context = {
+
+    }
+    return render(request, 'marketing.html', context)
+
+def company(request):
+    context = {
+
+    }
+    return render(request, 'company.html', context)
