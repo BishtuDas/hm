@@ -89,629 +89,545 @@
                  <!--Contact Information-->  
                  <div class="sf-contact-form3 shadow">
                     <form class="contact-form" method="post">
+                        {% csrf_token %}
                         <div class="row">
-                            
+                        <!-- COLUMNS 1 -->
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-group">
+                                 <label>Website Product</label>
+                                 <p>Which website product are you ordering?</p>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group">
+                                 <select class="form-select" aria-label="Default select example" name="website_product">
+                                    <option value="Custom Website: 5 pages">Custom Website: 5 pages</option>
+                                    <option value="Custom Website: 10 pages">Custom Website: 10 pages</option>
+                                    <option value="Custom Website: 15 pages">Custom Website: 15 pages</option>
+                                    <option value="Custom Website: 20 pages">Custom Website: 20 pages</option>
+                                    <option value="Custom Website: 25 pages">Custom Website: 25 pages</option>
+                                    <option value="Custom Website: 25+ pages">Custom Website: 25+ pages</option>
+                                    <option value="Custom Website: Landing Page">Custom Website: Landing Page</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label for="">Primary Goal</label>
+                              <p>What is the primary goal of this website?</p>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="aon-inputicon-box">
+                                       <div class="radio-inline-box sf-radio-check-row">
+                                          <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                             <input id="any111" name="inbound_leads" value="five" type="checkbox">
+                                             <label for="any111">Inbound Leads</label>
+                                          </div>
+                                          <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                             <input id="body111" name="quote_requests" value="five" type="checkbox">
+                                             <label for="body111">Quote Requests</label>
+                                          </div>
+                                          <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                             <input id="body111" name="brand_awareness" value="five" type="checkbox">
+                                             <label for="body111">Brand Awareness</label>
+                                          </div>
+                                          <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                             <input id="body111" name="education" value="five" type="checkbox">
+                                             <label for="body111">Education</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label for="">Other:</label>
+                                          <input type="text" name="other_primary_goal" class="form-control" placeholder="Other">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label for="">Social Links</label>
+                              <p>List any social media pages for your business that you would like included on the website.</p>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label for="">Facebook</label>
+                                          <input type="text" name="facebook" class="form-control" placeholder="eg.facebook.com/companyname">
+                                       </div>
+                                       <div class="col-md-12 mt-3">
+                                          <label for="">LinkedIn</label>
+                                          <input type="text" name="linkedin"  class="form-control" placeholder="eg.LinkedIn.com/companyname">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label for="">Other</label>
+                                          <input type="text" name="other_social_media" class="form-control" placeholder="eg.youtub.com/companyname">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">If you do not have a domain, please provide us with a domain name that you like that we can purchase on your behalf.
+                            </label>
+                            <div class="aon-inputicon-box">
+                                <div class="radio-inline-box sf-radio-check-row">
+                                    <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                        <input id="any11" name="domain_registration" value="I have a domain" type="radio">
+                                        <label for="any11">I have a domain </label>
+                                    </div>
+                                    <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                        <input id="body12" name="domain_registration" value="I do not have a domain, please purchase one on my behalf" type="radio">
+                                        <label for="body12">I do not have a domain, please purchase one on my behalf</label>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           <br>
+                           <br>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Domain Registrar</label>
+                                             <p>Who did you register your domain with?</p>
+                                             <input type="text" name="domain_registrar" class="form-control" placeholder="eg. GoDaddy">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Current Website URL</label>
+                                             <p> What is your current website URL?</p>
+                                             <input type="text" name="current_website_url" class="form-control" placeholder="eg webiste.com">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Username 
+                                             </label>
+                                             <p>What is the username to your domain registrar account? </p>
+                                             <input type="text" name="domain_username" class="form-control" placeholder="">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Password</label>
+                                             <p>What is the password to your domain registrar account?</p>
+                                             <input type="text" name="domain_password" class="form-control" placeholder="">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 mt-3">
+                                       <label for="">Requested Website URL
+                                       </label>
+                                       <p>Please provide options for your desired URL starting with your first choice.</p>
+                                       <input type="text" name="requested_website_url" class="form-control" placeholder="">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br> <br> <br>     
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <label for="">Navigation Structure
+                                       </label>
+                                       <P>Please follow the example layout and show us how
+                                          you want your navigation to appear on your website.
+                                       </P>
+                                       <input type="text" name="navigation_structure" class="form-control" placeholder="example layout:Home, About , Blog , Services">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Navigation Notes</label>
+                                             <p>Any additional information we need to know about
+                                                your navigation?
+                                             </p>
+                                             <input type="text" name="navigation_notes" class="form-control" placeholder="eg. For the Homepage , please create a section for each navigation">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Navigation Assets</label>
+                                             <p>Please link to a Dropbox or Google Drive folder
+                                                with any assets or screenshots
+                                             </p>
+                                             <input type="text" name="navigation_assets" class="form-control" placeholder="drive.google.com">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <label for="">Images                                        </label>
+                                 <p>If you don't have images, please select some demographics and we will select images for you.
+                                 </p>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="aon-inputicon-box">
+                                          <div class="radio-inline-box sf-radio-check-row">
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="any10" name="professional_images" value="five" type="checkbox">
+                                                <label for="any10">Professional</label>
+                                             </div>
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="body14" name=" related_to_business_images" value="five" type="checkbox">
+                                                <label for="body14">Related to my business
+                                                </label>
+                                             </div>
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="body15" name="fun_images 
+                                                   " value="five" type="checkbox">
+                                                <label for="body15">Fun</label>
+                                             </div>
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="body16" name="choose_for_me_images
+                                                   " value="five" type="checkbox">
+                                                <label for="body16">Choose for me
+                                                </label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Other:</label>
+                                             <input type="text" name="other_images_demographics" class="form-control" placeholder="please list additional demographics">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br><br><br>
+                           <!--Contact-->
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Primary Contact for Communications
+                                             </label>
+                                             <p>Our primary contact throughout the project.</p>
+                                             <input type="text" name="primary_contact_email" class="form-control" placeholder="eg.jon@gmail.com">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Secondary Contact for Communications 
+                                             </label>
+                                             <p>
+                                                This contact will be CC'd on project communications.
+                                             </p>
+                                             <input type="text" name="secondary_contact_email" class="form-control" placeholder="eg jon@gmail.com">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <label for="">Methods of Contact :</label>
+                                       <p>We will use these for your CTAs (Calls to Action).</p>
+                                       <div class="aon-inputicon-box">
+                                          <div class="radio-inline-box sf-radio-check-row">
+                                             <!--  -->
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="any18" name="email_cta" value="five" type="checkbox">
+                                                <label for="any18">Email</label>
+                                             </div>
+                                             <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
+                                                <input id="body17" name="phone_cta" value="five" type="checkbox">
+                                                <label for="body17">Phone</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Contact Form Email</label>
+                                             <p>Contact Email you want to receive messages to.</p>
+                                             <input type="text" name="contact_form_email" class="form-control" placeholder="an email account you have acces to">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <label>Contact Details
+                                 </label>
+                                 <p>Do you have a public email or phone number that you'd like displayed on your website?</p>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Phone Number</label>
+                                             <input type="text" name="public_phone_number" class="form-control" placeholder="eg. (123)-4567899">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Email
+                                             </label>
+                                             <input type="text" name="public_email" class="form-control" placeholder="eg contact@gmail.comm">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Address
+                                             </label>
+                                             <input type="text" name="business_address" class="form-control" placeholder="123 example st New York,NY">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Hours of Operation
+                                             </label>
+                                             <input type="text" name="hours_of_operation" class="form-control" placeholder="Monday to sunday : 8 AM - 4 Pm">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br><br><br>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Products
+                                             </label>
+                                             <p>Link to a doc with the example information.
+                                             </p>
+                                             <input type="text" name="products_doc_link" class="form-control" placeholder="">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Product CSV</label>
+                                             <p>Please upload product CSV with all products.</p>
+                                             <input type="text" name="product_csv_upload" class="form-control" placeholder="">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Images</label>
+                                             <p>Please link to a google drive or dropbox folder with
+                                                your product images.
+                                             </p>
+                                             <input type="text" name="product_images_link " class="form-control" placeholder="">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Payment Processor
+                                             </label>
+                                             <p>Payment Gateway + Username and Password.
+                                             </p>
+                                             <input type="text" name="payment_processor" class="form-control" placeholder="eg paypal">
+                                          </div>
+                                          <div class="col-md-12 mt-3">
+                                             <label for="">Shipping Options</label>
+                                             <p>Please include any shipping information here.
+                                             </p>
+                                             <input type="text" name="shipping_options" class="form-control" placeholder="Rate">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br> <br>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Additional Functionality
+                                             </label>
+                                             <p>Do you have any additional functionality?
+                                             </p>
+                                             <input type="text" name="additional_functionality" class="form-control" placeholder="i need a booking  calender and  a donation button">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Embed Codes
+                                             </label>
+                                             <p>Please provide any embed codes to be added onto the website </p>
+                                             <input type="text" name="embed_codes" class="form-control" placeholder="Any Google Analytics">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <h3>Web Copy Options</h3>
+                           <p>Please let us know if you require web copy to be written, or if you will be providing your own copy. We can also edit copy
+                              from your existing site to fit the new template.
+                           </p>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Tell us about your business. What does your company do? What are you selling?
+                                             </label>
+                                             <input type="text" name="business_description" class="form-control" placeholder="why is there need for it today market?">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Are there any slogans or catch phrases you’d like us to include?
+                                             </label>
+                                             <input type="text" name="slogans" class="form-control" placeholder="eg 'just movie it">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">Who is your target audience?</label>
+                                             <input type="text" name="target_audience" class="form-control" placeholder="who  benefits from your product/Services?">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Why would someone need your products/services?</label>
+                                             <input type="text" name="need_for_products_services" class="form-control" placeholder="who are  your competitors?">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Tell us the history behind your business. When did you open? What inspired you to start your business?
+                                             </label>
+                                             <input type="text" name="business_history" class="form-control" placeholder="is there a reason behind your business name?">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-12">
+                                             <label for="">What is your company’s mission statement? What are your brand values and beliefs?</label>
+                                             <input type="text" name="mission_statement" class="form-control" placeholder="Every business provides the best service.">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Why do you want someone to contact you?
+                                             </label>
+                                             <input type="text" name="contact_purpose" class="form-control" placeholder="do you offer free quotes estimates?">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Describe your products/services, with as much detail as possible
+                                             </label>
+                                             <input type="text" name="product_service_description" class="form-control" placeholder="what is it?">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Why do you want someone to contact you?
+                                             </label>
+                                             <input type="text" name="contact_purpose" class="form-control" placeholder="Do you offer free quotes?">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">What tone of voice would you like us to use?
+                                             </label>
+                                             <input type="text" name="tone_of_voice" class="form-control" placeholder="">
+                                          </div>
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Additional Information
+                                             </label>
+                                             <input type="text" name="additional_info" class="form-control" placeholder="">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="">
+                              <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                       </div>
+                                       <div class="row mt-3">
+                                          <div class="col-md-12">
+                                             <label for="">Did we miss anything? Include it here!
+                                             </label>
+                                             <input type="text" name="missed_details" class="form-control" placeholder="">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                            <!-- COLUMNS 1 -->
-                           <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Website Product</label>
-                                    <p>Which website product are you ordering?</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option>Custom Website: 5 pages</option>
-                                        <option>Custom Website: 10 pages</option>
-                                        <option>Custom Website: 15 pages</option>
-                                        <option>Custom Website: 20 pages</option>
-                                        <option>Custom Website: 25 pages</option>
-                                        <option>Custom Website: 25+ pages</option>
-                                        <option>Custom Website: Landing Page</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">Primary Goal</label>
-                                <p>What is the primary goal of this website?</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="aon-inputicon-box">
-                                            <div class="radio-inline-box sf-radio-check-row">
-                                                <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                    <input id="any111" name="Inbound Leads" value="five" type="checkbox">
-                                                    <label for="any111">Inbound Leads</label>
-                                                </div>
-                                                <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                    <input id="body111" name="Quote Requests" value="five" type="checkbox">
-                                                    <label for="body111">Quote Requests</label>
-                                                </div>
-                                                <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                    <input id="body111" name="Brand Awareness" value="five" type="checkbox">
-                                                    <label for="body111">Brand Awareness</label>
-                                                </div>
-                                                <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                    <input id="body111" name="Education" value="five" type="checkbox">
-                                                    <label for="body111">Education</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <label for="">Other:</label>
-                                                <input type="text" class="form-control" placeholder="Other">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">Social Links</label>
-                                <p>List any social media pages for your business that you would like included on the website.</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <label for="">Facebook</label>
-                                                <input type="text" class="form-control" placeholder="eg.facebook.com/companyname">
-                                            </div>
-                                            <div class="col-md-12 mt-3">
-                                                <label for="">LinkedIn</label>
-                                                <input type="text" class="form-control" placeholder="eg.LinkedIn.com/companyname">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <label for="">Other</label>
-                                                <input type="text" class="form-control" placeholder="eg.youtub.com/companyname">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">If you do not have a domain, please provide us with a domain name that you like that we can purchase on your behalf.
-                                </label>
-                                <div class="aon-inputicon-box"> 
-                        
-                                    <div class="radio-inline-box sf-radio-check-row">
-                        
-                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                            <input id="any11" name="I have a domain " value="five" type="radio">
-                                            <label for="any11">I have a domain </label>
-                                        </div>
-                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                            <input id="body12" name="I do not have a domain, please purchase one on my behalf" value="five" type="radio">
-                                            <label for="body12">I do not have a domain, please purchase one on my behalf</label>
-                                        </div>
-                                        
-                        
-                                    </div>
-                        
-                                </div>
-<br>
-<br>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Domain Registrar</label>
-                                                        <p>Who did you register your domain with?</p>
-                                                        <input type="text" class="form-control" placeholder="eg. GoDaddy">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Current Website URL</label>
-                                                        <p> What is your current website URL?</p>
-                                                        <input type="text" class="form-control" placeholder="eg webiste.com">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Username 
-                                                        </label>
-                                                        <p>What is the username to your domain registrar account? </p>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Password</label>
-                                                        <p>What is the password to your domain registrar account?</p>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mt-3">
-                                                <label for="">Requested Website URL
-                                                </label>
-                                                <p>Please provide options for your desired URL starting with your first choice.</p>
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                        
-                        
-                   <br> <br> <br>     
-                        
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="">Navigation Structure
-                                                </label>
-                                                <P>Please follow the example layout and show us how
-                                                    you want your navigation to appear on your website.</P>
-                                                <input type="text" class="form-control" placeholder="example layout:Home, About , Blog , Services">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Navigation Notes</label>
-                                                        <p>Any additional information we need to know about
-                                                            your navigation?
-                                                            </p>
-                                                        <input type="text" class="form-control" placeholder="eg. For the Homepage , please create a section for each navigation">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Navigation Assets</label>
-                                                        <p>Please link to a Dropbox or Google Drive folder
-                                                            with any assets or screenshots</p>
-                                                        <input type="text" class="form-control" placeholder="drive.google.com">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="">Images                                        </label>
-                                        <p>If you don't have images, please select some demographics and we will select images for you.
-                                        </p>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="aon-inputicon-box">
-                                                    <div class="radio-inline-box sf-radio-check-row">
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="any10" name="Professional" value="five" type="checkbox">
-                                                            <label for="any10">Professional</label>
-                                                        </div>
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="body14" name="Related to my business
-                                                            " value="five" type="checkbox">
-                                                            <label for="body14">Related to my business
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="body15" name="Fun
-                                                            " value="five" type="checkbox">
-                                                            <label for="body15">Fun</label>
-                                                        </div>
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="body16" name="Choose for me
-                                                            " value="five" type="checkbox">
-                                                            <label for="body16">Choose for me
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Other:</label>
-                                                        <input type="text" class="form-control" placeholder="please list additional demographics">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-
-<br><br><br>
-                                <!--Contact-->
-
-
-                         <div class="col-md-12">
-                                    <div class="form-group">
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Primary Contact for Communications
-                                                        </label>
-                                                        <p>Our primary contact throughout the project.</p>
-                                                        <input type="text" class="form-control" placeholder="eg.jon@gmail.com">
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Secondary Contact for Communications 
-                                                        </label>
-                                                        <p>
-                                                            This contact will be CC'd on project communications.</p>
-                                                        <input type="text" class="form-control" placeholder="eg jon@gmail.com">
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                       
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="">Methods of Contact :</label>
-                                                        <p>We will use these for your CTAs (Calls to Action).</p>
-                                                <div class="aon-inputicon-box">
-                                                    <div class="radio-inline-box sf-radio-check-row">
-                                                        <!--  -->
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="any18" name="email" value="five" type="checkbox">
-                                                            <label for="any18">Email</label>
-                                                        </div>
-                                                        <div class="checkbox sf-radio-checkbox sf-radio-check-2 sf-raChe-6">
-                                                            <input id="body17" name="phone" value="five" type="checkbox">
-                                                            <label for="body17">Phone</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Contact Form Email</label>
-                                                        <p>Contact Email you want to receive messages to.</p>
-                                                        <input type="text" class="form-control" placeholder="an email account you have acces to">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Contact Details
-                                        </label>
-                                        <p>Do you have a public email or phone number that you'd like displayed on your website?</p>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Phone Number</label>
-                                                    
-                                                        <input type="text" class="form-control" placeholder="eg. (123)-4567899">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Email
-                                                        </label>
-                                                        
-                                                        <input type="text" class="form-control" placeholder="eg contact@gmail.comm">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Address
-                                                        </label>
-                                                        
-                                                        <input type="text" class="form-control" placeholder="123 example st New York,NY">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Hours of Operation
-                                                        </label>
-                                                        
-                                                        <input type="text" class="form-control" placeholder="Monday to sunday : 8 AM - 4 Pm">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-<br><br><br>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Products
-                                                        </label>
-                                                        <p>Link to a doc with the example information.
-                                                        </p>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Product CSV</label>
-                                                        <p>Please upload product CSV with all products.</p>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Images</label>
-                                                        <p>Please link to a google drive or dropbox folder with
-                                                            your product images.
-                                                        </p>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Payment Processor
-                                                        </label>
-                                                        <p>Payment Gateway + Username and Password.
-                                                        </p>
-                                                        <input type="text" class="form-control" placeholder="eg paypal">
-                                                    </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <label for="">Shipping Options</label>
-                                                        <p>Please include any shipping information here.
-                                                        </p>
-                                                        <input type="text" class="form-control" placeholder="Rate">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <br> <br>
-                                <div class="">
-                                    <div class="form-group">
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <label for="">Additional Functionality
-                                                        </label>
-                                                        <p>Do you have any additional functionality?
-                                                        </p>
-                                                        <input type="text" class="form-control" placeholder="i need a booking  calender and  a donation button">
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-3">
-                                                    <div class="col-md-12">
-                                                        <label for="">Embed Codes
-                                                        </label>
-                                                        <p>Please provide any embed codes to be added onto the website </p>
-                                                        <input type="text" class="form-control" placeholder="Any Google Analytics">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h3>Web Copy Options</h3>
-                                <p>Please let us know if you require web copy to be written, or if you will be providing your own copy. We can also edit copy
-                                    from your existing site to fit the new template.</p>
-
-
-                                    <div class="">
-                                        <div class="form-group">
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label for="">Tell us about your business. What does your company do? What are you selling?
-
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="why is there need for it today market?">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Are there any slogans or catch phrases you’d like us to include?
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="eg 'just movie it">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="">
-                                        <div class="form-group">
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label for="">Who is your target audience?</label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="who  benefits from your product/Services?">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Why would someone need your products/services?</label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="who are  your competitors?">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Tell us the history behind your business. When did you open? What inspired you to start your business?
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="is there a reason behind your business name?">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="">
-                                        <div class="form-group">
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label for="">What is your company’s mission statement? What are your brand values and beliefs?</label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="Every business provides the best service.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Why do you want someone to contact you?
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="do you offer free quotes estimates?">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Describe your products/services, with as much detail as possible
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="what is it?">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Why do you want someone to contact you?
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="Do you offer free quotes?">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="">
-                                        <div class="form-group">
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">What tone of voice would you like us to use?
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Additional Information
-                                                            </label>
-                                                             
-                                                             <input type="text" class="form-control" placeholder="">
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="">
-                                        <div class="form-group">
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-md-12">
-                                                            <label for="">Did we miss anything? Include it here!
-                                                            </label>
-                                                            
-                                                            <input type="text" class="form-control" placeholder="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                            
-
-
-                            <!-- COLUMNS 1 -->
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="">Problem Summary- What problems do you solve for? </label>
-                                    <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
-                                </div>
-                            </div>
-                            
-                           
-                            
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <label for="">Problem Summary- What problems do you solve for? </label>
+                                 <textarea name="problem_summary" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                              </div>
+                           </div>
                         </div>
                         <div class="sf-contact-submit-btn text-center">
-                            <button class="site-button" type="submit">Save & Continue Editing</button>
-                            <button class="site-button" type="submit">Submit</button>
+                           <button class="site-button" type="submit">Save & Continue Editing</button>
+                           <button class="site-button" type="submit">Submit</button>
                         </div>
-                    </form>
+                     </form>
                 </div>
                 <!--Contact Information End-->
                 <!--Contact Information End-->

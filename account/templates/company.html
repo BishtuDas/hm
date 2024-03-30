@@ -90,12 +90,13 @@
                  <!--Contact Information-->  
                  <div class="sf-contact-form3 shadow">
                     <form class="contact-form" method="post">
+                    {% csrf_token %}
                     <h3>Marketing Plan </h3>    
                     
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">How do you plan on reaching your target audience? </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="reaching_target_audience" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -104,7 +105,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">What marketing channels are you currently using?  </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="marketing_channels" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -114,7 +115,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Which ones are working and which ones are not?  </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="working_channels" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -123,7 +124,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">What platforms are you using to track this?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="tracking_platforms" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -133,21 +134,21 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Does your company relies on salespeople to close deals/generate revenue?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="relies_on_salespeople" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">How do you convert people who express interest into paying customers?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="conversion_strategy" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for=""> This should coincide with your marketing plans.</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="marketing_alignment" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -156,7 +157,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Locations & Facilities-Telemedicine? </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="locations_description" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -164,7 +165,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for=""> Describe your company's physical locations. </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="available_space " placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
    
@@ -172,7 +173,7 @@
                         <div class="form-group">
                             <label for="">How much space do you have available? Is it enough to fulfill all of your current 
                                 business/future plans?  </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="future_plans_description" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
                     
@@ -183,7 +184,7 @@
                         <div class="form-group">
                             <label for=""> Describe any important software or other technology that you use now or 
                                 plan to use to operate your business: </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="software_description" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -191,14 +192,14 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">  EMR </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="emr" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Other Marketing tools </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="other_tools" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -211,21 +212,21 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">What are your key milestones and the dates you plan to accomplish them?  </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="milestones" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">How do you define success?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="success_definition " placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">What milestones have you already accomplished?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="accomplished_milestones" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -236,7 +237,7 @@
                         <div class="form-group">
                             <label for="">Which metrics do you focus on in your business to determine success? 
                                 Do you track KPl's?</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="key_metrics" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -245,7 +246,7 @@
                         <div class="form-group">
                             <label for="">What is your ROI from ongoing investments in your business? {Ex. marketing initiatives, 
                                 office, Paid Ads, community outreach, social, etc.}</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="roi" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -253,14 +254,14 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">KPI {Key Performance Indicators} List your KPIs {Ex. revenue, referrals, reviews, patient           satisfaction, etc.} </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="kpis" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">How do you use and monetize this data? </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="data_utilization" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -280,7 +281,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Legal Structure </label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="legal_structure" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
                     
@@ -289,14 +290,14 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">List the members of your management team including yourself.</label>
-                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="team_members" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="">Describe what each person's “brings to the table”: </label>
-                            <textarea name="message" placeholder="Role,Skills,Experience,Credentials,Expertise,Contribution,Strengths/weaknesses {Create SWOT Analysis}" class="form-control" rows="4" required=""></textarea>
+                            <textarea name="team_description" placeholder="Role,Skills,Experience,Credentials,Expertise,Contribution,Strengths/weaknesses {Create SWOT Analysis}" class="form-control" rows="4" required=""></textarea>
                         </div>
                     </div>
 
@@ -307,13 +308,13 @@
                     <div class="form-group">
                         <label for="">Do You Have One ?
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="has_financial_plan" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                    <div class="col-md-12">
                     <div class="form-group">
                         <label for="">Describe how you came up with the values in your forecast?
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="forecast_process" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -322,7 +323,7 @@
                         <label for="">Did you project your revenue based on past results, market research, your best guess at 
                             how many people who visit your store, and what percentage of them might buy, or 
                             some other method?</label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="revenue_projection" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -331,7 +332,7 @@
                     <div class="form-group">
                         <label for="">What kind of growth are you assuming? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="growth_assumption" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -342,7 +343,7 @@
                     <div class="form-group">
                         <label for="">What are your key hires and notable expenses? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="key_expenses" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -352,7 +353,7 @@
                     <div class="form-group">
                         <label for="">What level of profit do you expect to generate for the business and per patient? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="profit_expectation" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -360,7 +361,7 @@
                     <div class="form-group">
                         <label for="">Determine your Revenues and Expenses along with what is successful and what is not that you are investing money into. How do you quantify a successful business venture/expense? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="revenue_expense_tracking" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -371,7 +372,7 @@
                     <div class="form-group">
                         <label for="">Have you evaluated all aspects of your business? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="business_evaluation" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -380,7 +381,7 @@
                     <div class="form-group">
                         <label for="">Do you have a formal business plan and have you put together a proforma? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="has_business_plan" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -388,7 +389,7 @@
                     <div class="form-group">
                         <label for="">Have you created a budget? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="has_budget" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -396,7 +397,7 @@
                     <div class="form-group">
                         <label for=""> What are your goals?
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="goals" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -406,7 +407,7 @@
                     <div class="form-group">
                         <label for=""> How do you benchmarks where you are? 
                         </label>
-                        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                        <textarea name="benchmarks" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                     </div>
                 </div>
 
@@ -418,7 +419,7 @@
     <div class="form-group">
         <label for=""> What centers of influence (COI) refer/promote your business?
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_description" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -427,7 +428,7 @@
     <div class="form-group">
         <label for="">How do you help them?
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_support_strategy" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -435,7 +436,7 @@
     <div class="form-group">
         <label for="">Are you leveraging them?
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_leverage" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -443,7 +444,7 @@
     <div class="form-group">
         <label for="">Why don't you leverage them? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_challenges" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -451,7 +452,7 @@
     <div class="form-group">
         <label for="">Would you like a strategy to maximize those relationships? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_strategy" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -459,7 +460,7 @@
     <div class="form-group">
         <label for="">Do you have a referral network, ex. primary care, chiro or PT? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="referral_network" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -468,7 +469,7 @@
         <label for="">
             How do you leverage centers of influence? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="coi_leverage_strategy " placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 

@@ -92,6 +92,7 @@
                         <!--Contact Information-->  
                         <div class="sf-contact-form3 shadow">
                             <form class="contact-form" method="post">
+                                {% csrf_token %}
                                 <div class="row">
                                     
                                     <!-- COLUMNS 1 -->
@@ -112,7 +113,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What is it? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="process_description" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                     <!-- COLUMNS 2 -->
@@ -120,28 +121,28 @@
                                         <div class="form-group">
                                             <label for="">How many referrals do you get from other patients, medical professionals, friends, etc. on a yearly 
                                                 basis?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="yearly_referrals" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                     <!-- COLUMNS 2 -->
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How do you thank them? Why should people refer business to you?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="referral_thanks" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What methods of marketing are you currently utilizing to build your brand?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="marketing_methods" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How many landing pages do you have?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="landing_pages_count" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -155,37 +156,33 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option>Facebook Ads </option>
-                                                    <option>Google Ads</option>
-                                                    <option>Instagram ads</option>
-                                                    <option>Twitter ads</option>
-                                                    <option>3rd Party</option>
-                                                    <option>Vitals </option>
-                                                    <option>Billboards </option>
-                                                    <option>Digital marketing </option>
-
-                                                    <option>Healthgrades </option>
-                                                    <option>ZocDoc.com </option>
-                                                    <option>Healthgrades</option>
-                                                    <option>Docspot </option>
-                                                    <option>EZdoctor</option>
-                                                    <option>Caredash </option>
-                                                    <option>Website</option>
-                                                    <option>Bing Ads</option>
-                                                    <option>Apple</option>
-                                                    <option>Other Social Media </option>
-                                                    <option>Health.usnews.com</option>
-                                                    <option>Youtube</option>
-                                                    <option>Healthgrades.com </option>
-                                                    <option>Webmd.com </option>
-                                                    <option>Do you host any social </option>
-                                                    <option>Live events </option>
-
-                                                    <option>Reddit </option>
-                                                    <option>Your blog</option>
-                                                    <option>3rd Party Blogs</option>
-                                                    <option>Yelp </option>
+                                                <select class="form-select" name="website_product" aria-label="Default select example">
+                                                    <option value="Facebook Ads">Facebook Ads</option>
+                                                    <option value="Google Ads">Google Ads</option>
+                                                    <option value="Instagram ads">Instagram ads</option>
+                                                    <option value="Twitter ads">Twitter ads</option>
+                                                    <option value="3rd Party">3rd Party</option>
+                                                    <option value="Vitals">Vitals</option>
+                                                    <option value="Billboards">Billboards</option>
+                                                    <option value="Digital marketing">Digital marketing</option>
+                                                    <option value="Healthgrades">Healthgrades</option>
+                                                    <option value="ZocDoc.com">ZocDoc.com</option>
+                                                    <option value="Docspot">Docspot</option>
+                                                    <option value="EZdoctor">EZdoctor</option>
+                                                    <option value="Caredash">Caredash</option>
+                                                    <option value="Website">Website</option>
+                                                    <option value="Bing Ads">Bing Ads</option>
+                                                    <option value="Apple">Apple</option>
+                                                    <option value="Other Social Media">Other Social Media</option>
+                                                    <option value="Health.usnews.com">Health.usnews.com</option>
+                                                    <option value="Youtube">Youtube</option>
+                                                    <option value="Webmd.com">Webmd.com</option>
+                                                    <option value="Do you host any social">Do you host any social</option>
+                                                    <option value="Live events">Live events</option>
+                                                    <option value="Reddit">Reddit</option>
+                                                    <option value="Your blog">Your blog</option>
+                                                    <option value="3rd Party Blogs">3rd Party Blogs</option>
+                                                    <option value="Yelp">Yelp</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -201,14 +198,14 @@
                                         <div class="form-group">
                                             <label for="">Describe your process from the minute a patient contacts and throughout their journey. 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="patient_process" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                      <!-- COLUMNS 2 -->
                                      <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What is the lifetime value of your customers?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="lifetime_customer_value" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -216,14 +213,14 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How often are follow-up appointments? Is this consistent? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="follow_up_appointments" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What percentage of your patients return weekly, monthly, quarterly, or annually? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="returning_patients_percentage" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -236,16 +233,16 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option>Email</option>
-                                                    <option>Phone</option>
-                                                    <option>Text</option>
-                                                    <option>Newsletter </option>
-                                                    <option>Blog</option>
-                                                    <option>Social Media</option>
-                                                    <option>Media Communications </option>
-                                                    <option>Events </option>
-                                                    <option>Combination</option>
+                                                <select class="form-select" name="communication_method" aria-label="Default select example">
+                                                    <option value="Email">Email</option>
+                                                    <option value="Phone">Phone</option>
+                                                    <option value="Text">Text</option>
+                                                    <option value="Newsletter">Newsletter</option>
+                                                    <option value="Blog">Blog</option>
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Media Communications">Media Communications</option>
+                                                    <option value="Events">Events</option>
+                                                    <option value="Combination">Combination</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -253,7 +250,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Are you or your staff reaching out proactively or reactively?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="proactive_or_reactive" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -261,7 +258,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How Call/text/email reminders? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="reminders_method" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -269,7 +266,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">When/how does your staff follow up to confirm the appointment? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="follow_up_confirmation" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -277,7 +274,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">If they need to reschedule, what actions occur? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="reschedule_actions" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -301,7 +298,7 @@
                                         <div class="form-group">
                                             <label for="">If I were to Google your name what would I see? Do you know? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="google_search_results_personal_name" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -309,14 +306,14 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What about if I were to Google the name of your clinic? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="google_search_results_clinic_name" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                     <!-- COLUMNS 2 -->
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What does your claimed Google listing show? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="google_listing_info" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -324,21 +321,21 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Is all of the information accurate? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="information_accuracy" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How many reviews do you have?</label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="reviews_count" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What are your average ratings? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="average_ratings" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -349,7 +346,7 @@
                                         <div class="form-group">
                                             <label for="">Online reputation is extremely important in today's day and age?   
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="online_reputation_importance" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -357,14 +354,14 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">What is your process for requesting reviews from patients? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="review_request_process" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                     <!-- COLUMNS 2 -->
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for=""> When the patient leaves the office, do you have any more correspondences?  </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="correspondences_after_visit" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -374,28 +371,28 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">As a Medical Practitioner? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="challenges_as_practitioner" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">As a Business Owner? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="challenges_as_business_owner" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Industry Risks? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="industry_risks" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Competitive Risks? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="competitive_risks" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 </div>

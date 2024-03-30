@@ -95,41 +95,42 @@
                             <!--Contact Information-->  
                             <div class="sf-contact-form3 shadow">
                                 <form class="contact-form" method="post">
+                                    {% csrf_token %}
                                     <div class="row">
                                         
                                         <!-- COLUMNS 1 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">Problem Summary- What problems do you solve for? </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Problem_Summary" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <!-- COLUMNS 2 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">Why are you the right provider? </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Why_Right_Provider" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <!-- COLUMNS 2 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">Why should they come to you now?                                                </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Why_Come_To_You_Now" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <!-- COLUMNS 2 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">What will be different ? </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="What_Will_Be_Different" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <!-- COLUMNS 2 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">Your Solution Summary  </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Solution_Summary" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                        
@@ -142,14 +143,14 @@
                                             <div class="form-group">
                                                 <label for="">What are the patient demographics you cater to? 
                                                 </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Patient_Demographics" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                          <!-- COLUMNS 2 -->
                                          <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">What Is Your Unique Value Proposition ?   </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Unique_Value_Proposition" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
 
@@ -157,7 +158,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">How Many Patients Do You Have and How Much Do You Earn for Each Subset of Patient?   </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Patients_Earn_Subset" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <hr>
@@ -168,7 +169,7 @@
                                             <div class="form-group">
                                                 <label for="">Describe in depth the problems you want to solve for? 
                                                 </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Opportunity_Problems_Solve" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
 
@@ -176,14 +177,14 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">How do you target patients you want to reach? </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Target_Patients" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                         <!-- COLUMNS 2 -->
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">What Is Your Unique Value Proposition ?   </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Unique_Value_Proposition_Opportunity" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
 
@@ -191,7 +192,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="">How Many Patients Do You Have and How Much Do You Earn for Each Subset of Patient?   </label>
-                                                <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                                <textarea name="Earn_Opportunity" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -203,21 +204,21 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Have you created a financial forecast or proforma? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="Financial_Forecast" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">How much revenue based on each product or service do you generate? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="Revenue" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for=""> Percentage of Cash payers? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="cash_payers" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
                                     
@@ -225,7 +226,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Percentage of Insurance payers? </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="Insurance_payers" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -233,7 +234,7 @@
                                         <div class="form-group">
                                             <label for="">Do you offer products? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="offer_products" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -241,7 +242,7 @@
                                         <div class="form-group">
                                             <label for="">Do you cross-sell services? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="cross_sell" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -251,7 +252,7 @@
                                         <div class="form-group">
                                             <label for="">How many current patients do you have? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="current_patients" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -260,7 +261,7 @@
                                             <label for="">Do you need funding to accomplish your goals or are you adequately funded? How have 
                                                 you determined that? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="adequately_funded" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -271,7 +272,7 @@
                                         <div class="form-group">
                                             <label for=""> What services/products you want to provide? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="provide" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -279,7 +280,7 @@
                                         <div class="form-group">
                                             <label for="">What separates your services/products from your competitors?
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="competitors" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -287,7 +288,7 @@
                                         <div class="form-group">
                                             <label for="">What does your practice/company provide patients that your competitors do not do or do not do as well? 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="provide_patients" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -295,7 +296,7 @@
                                         <div class="form-group">
                                             <label for="">What makes you unique?
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="unique" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -308,7 +309,7 @@
                                         <div class="form-group">
                                             <label for="">Market Size and Segments. {Unless you practice telemedicine, think how far patients     will travel to see you.} 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="Segments" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -316,7 +317,7 @@
                                         <div class="form-group">
                                             <label for=""> Provide an in-depth analysis of your key payers. 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="key_payers" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -324,7 +325,7 @@
                                         <div class="form-group">
                                             <label for="">Both current and desired. 
                                             </label>
-                                            <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+                                            <textarea name="desired" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
                                         </div>
                                     </div>
 
@@ -334,7 +335,7 @@
         <label for=""> What are the specific types of patients you want to build your practice on or expand 
             your practice with? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="specific_types" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
                        
@@ -348,7 +349,7 @@
         <label for="">
             If you wish to target multiple groups {aka segments}, please tell us more about each of these groups.
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="multiple_groups" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 
@@ -361,7 +362,7 @@
            
 Do you have a specific group for each service or more of a blanket outlook? 
         </label>
-        <textarea name="message" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
+        <textarea name="blanket_outlook" placeholder="Answer" class="form-control" rows="4" required=""></textarea>
     </div>
 </div>
 

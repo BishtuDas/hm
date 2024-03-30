@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.views.generic import CreateView
+from .models import Customer, Company, Marketing, Website
+from .forms import CustomerForm, CompanyForm, MarketingForm, WebsiteForm
 
 # Create your views here.
 def singup(request):
@@ -15,18 +18,26 @@ def dentist(request):
     return render(request, 'request.html', context)
 
 def customer(request):
-    context = {
-
-    }
-    return render(request, 'customer.html', context)
+    if request.method == 'POST':
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+           
+    else:
+        form = CustomerForm()
+    return render(request, 'customer_form.html', {'form': form})
 
 
 
 def website(request):
-    context = {
-
-    }
-    return render(request, 'website.html', context)
+    if request.method == 'POST':
+        form = WebsiteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    else:
+        form = WebsiteForm()
+    return render(request, 'website.html', {'form': form})
 
 def patient_password(request):
     context = {
@@ -43,13 +54,22 @@ def patient_profile(request):
 
 
 def marketing(request):
-    context = {
-
-    }
-    return render(request, 'marketing.html', context)
+    if request.method == 'POST':
+        form = MarketingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    else:
+        form = MarketingForm()
+    return render(request, 'marketing.html', {'form': form})
+    
 
 def company(request):
-    context = {
-
-    }
-    return render(request, 'company.html', context)
+    if request.method == 'POST':
+        form = CompanyForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    else:
+        form = CompanyForm()
+    return render(request, 'company.html', {'form': form})
